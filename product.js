@@ -98,3 +98,5 @@ selects.forEach(select => {
     cardsArray.forEach(card => grid.appendChild(card));
   });
 });
+
+
