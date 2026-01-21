@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tienda Gamer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="product.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Filtrar</h3>
+      <input type="text" placeholder="Buscar producto..." />
+
+<!-- Categorías -->
+<h4>categorias</h4>
+<ul class="categories">
+  <li class="active" data-category="videojuegos">Videojuegos</li>
+  <li data-category="consolas">Consolas</li>
+  <li data-category="accesorios">Accesorios</li>
+  <li data-category="membresias">Membresías</li>
+</ul>
+
+
+<!-- Subcategorías -->
+  <h4>subcategorias</h4>
+ <ul class="subcategories" data-category="videojuegos">
+  <li>Acción</li>
+  <li>FPS</li>
+  <li>RPG</li>
+  <li>Battle Royale</li>
+</ul>
+
+<ul class="subcategories" data-category="consolas" style="display:none">
+  <li>PS5</li>
+  <li>Xbox Series</li>
+  <li>Nintendo</li>
+</ul>
+
+<ul class="subcategories" data-category="accesorios" style="display:none">
+  <li>Auriculares</li>
+  <li>Teclados</li>
+  <li>Mouse</li>
+</ul>
+
+<ul class="subcategories" data-category="membresias" style="display:none">
+  <li>Xbox Live</li>
+  <li>PlayStation Plus</li>
+  <li>Nintendo Online</li>
+</ul>
+
+
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+
+      <!-- Sección Videojuegos -->
+      <section class="content" id="videojuegos">
+        <div class="content-header">
+          <div>
+            <h1>Videojuegos</h1>
+            <p>resultados</p>
+          </div>
+          <select>
+            <option>Ordenar por popularidad</option>
+            <option>Precio menor a mayor</option>
+            <option>Precio mayor a menor</option>
+          </select>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <img src="./img/lol.jpeg" alt="League of Legends" />
+            <h3>League of Legends</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/valorant.jpeg" alt="Valorant" />
+            <h3>Valorant</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/fornite.webp" alt="fornite" />
+            <h3>Fortnite</h3>
+            <div class="price">$0</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/GTA.jpeg" alt="GTA 5" />
+            <h3>GTA 5</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/halo infinte.webp" alt="HALO INFINTE" />
+            <h3>HALO INFINITE</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/tomb raider.jpg" alt="TOMB RAIDER" />
+            <h3>TOMB RAIDER</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/valhalla.jpeg" alt="Assasin creed valhalla" />
+            <h3>Assasin creed valhalla</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+        <div class="card">
+            <img src="./img/GODOFWAR.jpeg" alt="GOD OF WAR" />
+            <h3>GOD OF WAR</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/walking.webp" alt="walking dead" />
+            <h3>The Walking Dead</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/Elden_Ring_Portada.webp" alt="ELDEN RING" />
+            <h3>ELDEN RING</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/Monster_Hunter_World_cover_art.jpg" alt="MONSTER HUNTER" />
+            <h3>MONSTER HUNTER</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/Legacy.jpeg" alt="HOGWARTS LEGACY" />
+            <h3>Hogwarts Legacy</h3>
+            <div class="price">Gratis</div>
+            <button>Ver más</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Consolas -->
+      <section class="content">
+        <div class="content-header" id="consolas">
+          <div>
+            <h1>Consolas</h1>
+            <p>resultados</p>
+          </div>
+          <select>
+            <option>Ordenar por popularidad</option>
+            <option>Precio menor a mayor</option>
+            <option>Precio mayor a menor</option>
+          </select>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <img src="./img/PS5PRO.webp" alt="PSP5" />
+            <h3>PlayStation 5</h3>
+            <div class="price">$499.99</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/XBOX.webp" alt="XBOX ONE" />
+            <h3>Xbox Series X</h3>
+            <div class="price">$499.99</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/SWITCH.webp" alt="NINTENDO SWITCH" />
+            <h3>Nintendo Switch</h3>
+            <div class="price">$299.99</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/SWITCH 2.webp" alt="NINTENDO SWITCH 2" />
+            <h3>Nintendo Switch</h3>
+            <div class="price">$299.99</div>
+            <button>Ver más</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Accesorios -->
+      <section class="content" id="accesorios">
+        <div class="content-header">
+          <div>
+            <h1>Accesorios</h1>
+            <p>resultados</p>
+          </div>
+          <select>
+            <option>Ordenar por popularidad</option>
+            <option>Precio menor a mayor</option>
+            <option>Precio mayor a menor</option>
+          </select>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <img src="./img/audifonos.jpg" alt="audifonos Gamer" />
+            <h3>Auriculares Gamer</h3>
+            <div class="price">$79.99</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/teclado.jpg" alt="Teclado" />
+            <h3>Teclado Mecánico</h3>
+            <div class="price">$99.99</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/mouse.jpeg" alt="Mouse" />
+            <h3>Mouse Gamer</h3>
+            <div class="price">$49.99</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/alfombrilla.avif" alt="Mouse pad" />
+            <h3>Alfombrilla</h3>
+            <div class="price">$19.99</div>
+            <button>Ver más</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Membresías -->
+      <section class="content" id="membresias">
+        <div class="content-header">
+          <div>
+            <h1>Membresías</h1>
+            <p>resultados</p>
+          </div>
+          <select>
+            <option>Ordenar por popularidad</option>
+            <option>Precio menor a mayor</option>
+            <option>Precio mayor a menor</option>
+          </select>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <img src="./img/xbox live.jpeg" alt="xbox live" />
+            <h3>Xbox Live Gold</h3>
+            <div class="price">$59.99</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/playstationplus.jpeg" alt="PlayStation plus" />
+            <h3>PlayStation Plus</h3>
+            <div class="price">$49.99</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/nintendoonline.jpeg" alt="Nintendo Online" />
+            <h3>Nintendo Online</h3>
+            <div class="price">$19.99</div>
+            <button>Ver más</button>
+          </div>
+
+          <div class="card">
+            <img src="./img/steam.jpeg" alt="tarjeta steam" />
+            <h3>gif card</h3>
+            <div class="price">$19.99</div>
+            <button>Ver más</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+<script src="product.js"></script>
+
+</body>
+</html>
