@@ -1,48 +1,53 @@
-
+/* Reset y box-sizing global */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Incluye padding y border dentro del ancho y alto de los elementos */
 }
+
+/* Estilos base del body */
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0a0114;
-  color: rgba(255, 255, 255, 0.85);
+  margin: 0; /* Elimina el margen por defecto */
+  font-family: 'Inter', sans-serif; /* Fuente principal */
+  background-color: #0a0114; /* Fondo oscuro de la página */
+  color: rgba(255, 255, 255, 0.85); /* Color de texto principal */
 }
+
+/* Estilos para enlaces */
 a {
-  color: #ff9a2f;
-  text-decoration: none;
+  color: #ff9a2f; /* Color naranja para enlaces */
+  text-decoration: none; /* Sin subrayado */
 }
 
 /* Layout principal */
 .container {
-  display: flex;
-  min-height: 100vh;
-  gap: 20px;
-  padding: 20px;
+  display: flex; /* Contenedor flexible para sidebar + contenido */
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  gap: 20px; /* Espacio entre sidebar y contenido */
+  padding: 20px; /* Espacio interno */
 }
 
 /* Sidebar */
 .sidebar {
-  width: 220px;
+  width: 220px; /* Ancho fijo */
   background: linear-gradient(
     180deg,
     rgba(90, 20, 120, 0.75),
     rgba(30, 10, 60, 0.85)
-  );
-  border-radius: 18px;
-  padding: 20px;
-  flex-shrink: 0;
-  position: sticky;
-  top: 20px;
-  align-self: flex-start;
+  ); /* Degradado de fondo */
+  border-radius: 18px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  flex-shrink: 0; /* No se encoge en el flex container */
+  position: sticky; /* Sidebar fijo al hacer scroll */
+  top: 20px; /* Separación superior */
+  align-self: flex-start; /* Alineación vertical al inicio */
 
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow:
+  backdrop-filter: blur(16px); /* Efecto de desenfoque de fondo */
+  border: 1px solid rgba(255, 255, 255, 0.12); /* Borde translúcido */
+  box-shadow: /* Sombras externas e internas */
     0 0 25px rgba(130, 35, 207, 0.45),
     inset 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
+/* Títulos del sidebar */
 .sidebar h3 {
   margin-top: 0;
   margin-bottom: 15px;
@@ -50,6 +55,7 @@ a {
   color: #ffffff;
 }
 
+/* Input de búsqueda */
 .sidebar input[type="text"] {
   width: 100%;
   padding: 8px 10px;
@@ -59,26 +65,28 @@ a {
   font-size: 14px;
   background-color: rgba(30, 10, 60, 0.9);
   color: #ffffff;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6); /* Sombra interna */
 }
 
+/* Lista de categorías y subcategorías */
 .sidebar ul {
-  list-style: none;
+  list-style: none; /* Sin viñetas */
   padding-left: 0;
   margin: 0 0 20px 0;
 }
 
 .sidebar ul li {
   margin-bottom: 10px;
-  cursor: pointer;
+  cursor: pointer; /* Cambio de cursor al pasar por encima */
   font-size: 15px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8px; /* Espacio entre icono y texto si hubiera */
   color: rgba(255, 255, 255, 0.75);
-  transition: color 0.2s;
+  transition: color 0.2s; /* Animación suave en hover */
 }
 
+/* Estado activo o hover en categorías */
 .sidebar ul li.active,
 .sidebar ul li:hover {
   color: #ff9a2f;
@@ -88,14 +96,14 @@ a {
 
 /* Contenido principal */
 .main-content {
-  flex: 1;
+  flex: 1; /* Ocupa todo el espacio restante */
   display: flex;
-  flex-direction: column;
-  gap: 50px;
-  overflow-x: hidden;
+  flex-direction: column; /* Secciones apiladas verticalmente */
+  gap: 50px; /* Espacio entre secciones */
+  overflow-x: hidden; /* Evita scroll horizontal */
 }
 
-/* Cada sección */
+/* Cada sección (Videojuegos, Consolas, etc.) */
 .content {
   background: linear-gradient(
     180deg,
@@ -112,6 +120,7 @@ a {
     inset 0 0 25px rgba(255, 255, 255, 0.05);
 }
 
+/* Header de cada sección (titulo + select) */
 .content-header {
   display: flex;
   justify-content: space-between;
@@ -144,14 +153,14 @@ a {
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Grid */
+/* Grid de productos */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas adaptables */
+  gap: 20px; /* Espacio entre tarjetas */
 }
 
-/* Cards */
+/* Tarjetas de productos */
 .card {
   background: linear-gradient(
     180deg,
@@ -168,7 +177,6 @@ a {
   text-align: center;
   justify-content: flex-start;
 
-
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.15);
 
@@ -176,9 +184,10 @@ a {
     0 0 25px rgba(130, 35, 207, 0.4),
     inset 0 0 20px rgba(255, 255, 255, 0.05);
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación suave al hover */
 }
 
+/* Hover de la tarjeta */
 .card:hover {
   transform: translateY(-5px);
   box-shadow:
@@ -186,6 +195,7 @@ a {
     inset 0 0 25px rgba(255, 255, 255, 0.08);
 }
 
+/* Imagen de la tarjeta */
 .card img {
   max-width: 100%;
   border-radius: 16px;
@@ -195,14 +205,15 @@ a {
   height: 180px;
   width: 100%;
   object-position: center;
-
 }
 
+/* Nombre del producto */
 .card h3 {
   margin: 0 0 8px 0;
   font-weight: 700;
 }
 
+/* Precio del producto */
 .price {
   color: #ff9a2f;
   font-weight: 700;
@@ -211,6 +222,7 @@ a {
   text-shadow: 0 0 10px rgba(255, 154, 47, 0.6);
 }
 
+/* Botón de la tarjeta */
 .card button {
   background: linear-gradient(180deg, #ff9a2f, #ff7b00);
   border: none;
@@ -225,6 +237,7 @@ a {
   box-shadow: 0 6px 18px rgba(255, 130, 0, 0.6);
 }
 
+/* Hover del botón */
 .card button:hover {
-  filter: brightness(1.05);
+  filter: brightness(1.05); /* Aumenta brillo al pasar el cursor */
 }
